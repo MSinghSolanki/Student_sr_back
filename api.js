@@ -11,12 +11,9 @@ const MONGODB_URI = 'mongodb+srv://allen:allen@cluster0.wesod.mongodb.net/studen
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch(err => console.log(err));
+mongoose.connect(MONGODB_URI)
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => console.log(err));
 
 // Routes
 app.use('/students', studentRoutes);
