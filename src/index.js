@@ -10,9 +10,10 @@ const MONGODB_URI = 'mongodb+srv://allen:allen@cluster0.wesod.mongodb.net/studen
 // Middleware
 app.use(bodyParser.json());
 
+
 // MongoDB Connection
 mongoose.connect(MONGODB_URI)
-    .then(() => console.log('Connected to MongoDB'))
+    .then(() => console.log('Connected is MongoDB'))
     .catch(err => console.log(err));
 
 // Routes
